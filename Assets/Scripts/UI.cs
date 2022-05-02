@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
+    
+
     public void LoadMain()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);        
     }
 
     public void LoadMenu()
@@ -18,7 +20,7 @@ public class UI : MonoBehaviour
 
     public void Exit()
     {
-        //MainManager.Instance.SaveColor();
+        DataManager.Instance.SaveScore();
 
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
